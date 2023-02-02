@@ -1,0 +1,21 @@
+axios
+    .post('', )
+    .then((res) => {
+        if(res.data.status) {
+            toastr.success(res.data.message);
+        } else {
+            toastr.error(res.data.message);
+        }
+    })
+    .catch((res) => {
+        $.each(res.response.data.errors, function(k, v) {
+            toastr.error(v[0]);
+        });
+    });
+
+axios
+    .get('')
+    .then((res) => {
+
+    });
+
